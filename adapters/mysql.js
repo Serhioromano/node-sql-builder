@@ -1,4 +1,4 @@
 exports.renderselect = function(s)
 {
-	console.log(s.buffer);
+	return JSON.stringify(s.buffer);
 }

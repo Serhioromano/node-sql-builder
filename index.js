@@ -1,3 +1,6 @@
+var fs = require('fs');
+var util = require('util');
+
 exports.setOptions = function(options)
 {
 	this.setAdapter(options.adapter);
@@ -12,11 +15,18 @@ exports.select = require('./lib/select');
 exports.update = require('./lib/update');
 exports.delete = require('./lib/delete');
 
+
+
 exports.toString = function(query)
 {
+	fs.exists(__dirname +  '/adapters/' + this.adapter + '.js', function (exists) {
+      if(!exists){
+      	util.error('adapter not found');
+      	return;
+      }
+    });
+    
 	var adp = require('./adapters/' + this.adapter);
 	
-	adp['render' + query.type](query);
+	return adp['render' + query.type](query);
 }
-
-//var q = queries.select || (queries.select = require('./adapters/' + this.adapter + '/select'));
