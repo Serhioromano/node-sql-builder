@@ -1,0 +1,33 @@
+{
+  "_from": "sql-builder@0.x",
+  "_id": "sql-builder@0.1",
+  "author": {
+    "email": "serg4172@mail.ru",
+    "name": "Sergey Romanov",
+    "url": "http://www.facebook.com/serhioromano"
+  },
+  "dependencies": {
+    "hashish": "0.0.4"
+  },
+  "description": "Adapter based SQL query builder",
+  "dist": {
+    "shasum": "62d49c4b6038c96bdeff581d82c706dd5d72c17a"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "homepage": "https://github.com/Serhioromano/node-sql-builder",
+  "main": "./index",
+  "name": "sql-builder",
+  "optionalDependencies": {
+  },
+  "readme": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Serhioromano/node-sql-builder.git"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "version": "0.1"
+}
