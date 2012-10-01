@@ -29,7 +29,10 @@
   "engines": {
     "node": "*"
   },
+  "dependencies" : {
+    "underscore" :  "1.4.x"
+  },
   "directories": [
-    "example": "./examples"
+    {"example": "./examples"}
   ]
 }

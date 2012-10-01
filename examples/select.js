@@ -1,5 +1,5 @@
-var Select = require('sql-builder').select;
-var Sql    = require('sql-builder').renderer;
+var Select = require('../index').select;
+var Sql    = require('../index').renderer;
 
 // you can assign some query data on construction
 var query = new Select({
