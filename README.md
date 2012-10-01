@@ -2,13 +2,20 @@
 
 This is adapter based SQL query builder. This means that building queries for every DB like MySQL, SQLite is handled by separate adapter. It make this sql query builder highly extendable.
 
-I have tryied to make usage quite straight forward.
+
+## Install
+
+We are not yet in nmp. I do not want to publish there something incomplete. But as soon as main functinality is ready and it is become usable, I'll publish it. Right now you can only download or checkout it to your `projectroot/node_modules/sql-builder`. 
+
+## How to use
+
+I have tryied to make usage quite straight forward. This is just few examples. See examples folder for more examples.
 
 ### Selects
 
 ```js
-var Select = require('../index').select;
-var Sql    = require('../index').renderer;
+var Select = require('sql-builder').select;
+var Sql    = require('sql-builder').renderer;
 
 // you can assign some query data on construction
 var query = new Select({
@@ -43,8 +50,8 @@ console.log(sql);
 ### Delete
 
 ```js
-var Delete = require('../index').delete;
-var Sql    = require('../index').renderer;
+var Delete = require('sql-builder').delete;
+var Sql    = require('sql-builder').renderer;
 
 // add parametres on cunstruction
 var query1 = new Delete({from: 'users', where:["id = 10", "blocked = 0"]});
