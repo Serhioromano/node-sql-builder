@@ -1,20 +1,25 @@
-var query = require('../index');
+var Select = require('sql-builder').select;
+var Sql    = require('sql-builder').renderer;
 
-query.setAdapter('mysql');
+// you can assign some query data on construction
+var query = new Select({
+	group:['time'], 
+	having:['t = 1 ASC', 'b = 2 DESC']
+});
 
-var select = query.select;
+// You can use chains
+query
+	.select('u.*')
+	.from('users AS u');
 
-select.select('*')
-	.from('users')
-	.where('id = 1')
-	.where('block = 0');
+query.where("u.name = 'john'");
 
-select.where("name = 'sergey'");
 
-console.log(query.toString(select));
+query.select('a.avatar').join('user_attr AS a ON a.user_id = u.id');
 
-select.reset();
+// show 10 items per page and 5th page
+query.offset(5, 10);
 
-select.select('r.id').from('articles AS r').where('ctime > NOW()');
-
-console.log(query.toString(select));
+// render to string throu renderer
+var sql = Sql.toString(query);
+console.log(sql);
