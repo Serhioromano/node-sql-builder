@@ -1,15 +1,10 @@
 ## Node SQL Query Builder
 
-This is adapter based SQL query builder. This means that building queries for every DB like MySQL, SQLite is handled by separate adapter. It make this sql query builder highly extendable.
-
-
-## Install
-
-We are not yet in nmp. I do not want to publish there something incomplete. But as soon as main functinality is ready and it is become usable, I'll publish it. Right now you can only download or checkout it to your `projectroot/node_modules/sql-builder`. 
+This is adapter based SQL query builder. This means that building queries for every DB like MySQL, SQLite is handled by separate adapter. It make this sql query builder highly extendable. Right now it only have `mysql` adapter.
 
 ## How to use
 
-I have tryied to make usage quite straight forward. This is just few examples. See examples folder for more examples.
+I have tried to make usage straight forward. These are just few examples. See examples folder for more examples.
 
 ### Selects
 
@@ -74,4 +69,31 @@ query2.where({test:'my = 2'});
 query2.resetWhere('c2');
 
 console.warn(query.toString());
+```
+
+### Insert
+
+```js
+var Insert = require('../index').insert;
+var Sql    = require('../index').renderer;
+
+var query = new Insert();
+
+query.into('user');
+
+query.values({
+	id: 0,
+	name: 'sergey'
+});
+
+query.values({
+	block: 0,
+	password: '123'
+});
+
+query.values({
+	description: "this is user's \"descritption\"! \n Or ''not? \n Anyway #1 user to test simbols."
+});
+
+console.log(query.toString());
 ```
