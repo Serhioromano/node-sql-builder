@@ -27,5 +27,4 @@ query.offset(5, 10);
 query.resetSelect('selmsg');
 
 // render to string throu renderer
-var sql = Sql.toString(query);
-console.log(sql);
+console.log(query.toString());

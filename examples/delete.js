@@ -3,7 +3,7 @@ var Sql    = require('../index').renderer;
 
 // add parametres on cunstruction
 var query1 = new Delete({from: 'users', where:["id = 10", "blocked = 0"]});
-console.warn(Sql.toString(query1));
+console.warn(query1.toString());
 
 var query2 = new Delete();
 
@@ -22,7 +22,7 @@ query2.where({test:'my = 2'});
 // reset key. If no key all where reseted
 query2.resetWhere('c2');
 
-console.warn(Sql.toString(query2));
+console.warn(query2.toString());
 
 
 
