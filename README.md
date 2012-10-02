@@ -43,8 +43,7 @@ query.offset(5, 10);
 query.resetSelect('selmsg');
 
 // render to string throu renderer
-var sql = Sql.toString(query);
-console.log(sql);
+console.log(query.toString());
 ```
 
 ### Delete
@@ -55,7 +54,7 @@ var Sql    = require('sql-builder').renderer;
 
 // add parametres on cunstruction
 var query1 = new Delete({from: 'users', where:["id = 10", "blocked = 0"]});
-console.warn(Sql.toString(query1));
+console.warn(query.toString());
 
 var query2 = new Delete();
 
@@ -74,5 +73,5 @@ query2.where({test:'my = 2'});
 // reset key. If no key all where reseted
 query2.resetWhere('c2');
 
-console.warn(Sql.toString(query2));
+console.warn(query.toString());
 ```
