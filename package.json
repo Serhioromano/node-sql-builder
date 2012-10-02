@@ -1,13 +1,13 @@
 {
   "name": "sql-builder",
   "preferGlobal": "false",
-  "version": "0.0.1",
+  "version": "0.0.1beta",
   "author": {
     "email": "serg4172@mail.ru",
     "name": "Sergey Romanov",
     "url": "http://www.facebook.com/serhioromano"
   },
-  "description": "SQL query builder. OO query construction is very handy when you need to add WHERE after you know ORDER for example",
+  "description": "SQL query builder. OO query construction is very handy when you need to add `WHERE` after you know `ORDER` for example.",
   "contributors": [ 
     {
       "name": "May be you?",
@@ -31,8 +31,5 @@
   },
   "dependencies" : {
     "underscore" :  "1.4.x"
-  },
-  "directories": [
-    {"example": "./examples"}
-  ]
+  }
 }
