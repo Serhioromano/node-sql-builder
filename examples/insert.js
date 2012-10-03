@@ -1,5 +1,4 @@
 var Insert = require('../index').insert;
-var Sql    = require('../index').renderer;
 
 var query = new Insert();
 

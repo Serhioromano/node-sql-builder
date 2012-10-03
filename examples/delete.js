@@ -1,5 +1,4 @@
 var Delete = require('../index').delete;
-var Sql    = require('../index').renderer;
 
 // add parametres on cunstruction
 var query1 = new Delete({from: 'users', where:["id = 10", "blocked = 0"]});
