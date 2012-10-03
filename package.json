@@ -31,5 +31,8 @@
   },
   "dependencies" : {
     "underscore" :  "1.4.x"
+  },
+  "config": {
+    "adapter" : "mysql"
   }
 }
