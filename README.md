@@ -1,10 +1,9 @@
 ## Node SQL Query Builder
 
-This is adapter based SQL query builder. This means that building queries for every DB like MySQL, SQLite is handled by separate adapter. It make this sql query builder highly extendable. Right now it only have `mysql` adapter.
+This is adapter based SQL query builder. This means that building queries for every DB like MySQL(included), 
+SQLite is handled by separate adapters. It make this sql query builder highly extendable.
 
 ## How to use
-
-I have tried to make usage straight forward. These are just few examples. See examples folder for more examples.
 
 ### Selects
 
@@ -115,3 +114,9 @@ query.where('id = 1').where(['block = 0', 'date > NOW()']);
 
 console.log(query.toString());
 ```
+
+## Change Log
+
+#### v.0.0.3Beta
+
+- small tunes of the code to be cleater and more readable.
