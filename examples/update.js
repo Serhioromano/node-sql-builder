@@ -1,3 +1,5 @@
+require('colors');
+
 var Update = require('../index').update;
 
 var query = new Update();
@@ -10,4 +12,4 @@ query.set({
 
 query.where('id = 1').where(['block = 0', 'date > NOW()']);
 
-console.log(query.toString());
+console.log(query.toString().bold.blue);

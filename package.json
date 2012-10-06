@@ -35,7 +35,8 @@
     "node": "*"
   },
   "dependencies" : {
-    "underscore" :  "1.4.x"
+    "underscore" :  "1.4.x",
+    "colors" :  "0.6.x"
   },
   "config": {
     "adapter" : "mysql"

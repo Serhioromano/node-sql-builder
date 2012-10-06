@@ -8,8 +8,9 @@ SQLite is handled by separate adapters. It make this sql query builder highly ex
 ### Selects
 
 ```js
-var Select = require('sql-builder').select;
-var Sql    = require('sql-builder').renderer;
+require('colors');
+
+var Select = require('../index').select;
 
 // you can assign some query data on construction
 var query = new Select({
@@ -37,18 +38,19 @@ query.offset(5, 10);
 query.resetSelect('selmsg');
 
 // render to string throu renderer
-console.log(query.toString());
+console.log(query.toString().bold.blue);
 ```
 
 ### Delete
 
 ```js
-var Delete = require('sql-builder').delete;
-var Sql    = require('sql-builder').renderer;
+require('colors');
+
+var Delete = require('../index').delete;
 
 // add parametres on cunstruction
 var query1 = new Delete({from: 'users', where:["id = 10", "blocked = 0"]});
-console.warn(query.toString());
+console.warn(query1.toString().bold.green);
 
 var query2 = new Delete();
 
@@ -67,14 +69,15 @@ query2.where({test:'my = 2'});
 // reset key. If no key all where reseted
 query2.resetWhere('c2');
 
-console.warn(query.toString());
+console.warn(query2.toString().bold.blue);
 ```
 
 ### Insert
 
 ```js
+require('colors');
+
 var Insert = require('../index').insert;
-var Sql    = require('../index').renderer;
 
 var query = new Insert();
 
@@ -94,12 +97,14 @@ query.values({
 	description: "this is user's \"descritption\"! \n Or ''not? \n Anyway #1 user to test simbols."
 });
 
-console.log(query.toString());
+console.log(query.toString().bold.blue);
 ```
 
 ### Update
 
 ```js
+require('colors');
+
 var Update = require('../index').update;
 
 var query = new Update();
@@ -112,7 +117,7 @@ query.set({
 
 query.where('id = 1').where(['block = 0', 'date > NOW()']);
 
-console.log(query.toString());
+console.log(query.toString().bold.blue);
 ```
 
 ## Change Log
