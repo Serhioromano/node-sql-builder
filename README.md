@@ -10,7 +10,7 @@ SQLite is handled by separate adapters. It make this sql query builder highly ex
 ```js
 require('colors');
 
-var Select = require('../index').select;
+var Select = require('sql-builder').select;
 
 // you can assign some query data on construction
 var query = new Select({
@@ -46,7 +46,7 @@ console.log(query.toString().bold.blue);
 ```js
 require('colors');
 
-var Delete = require('../index').delete;
+var Delete = require('sql-builder').delete;
 
 // add parametres on cunstruction
 var query1 = new Delete({from: 'users', where:["id = 10", "blocked = 0"]});
@@ -77,7 +77,7 @@ console.warn(query2.toString().bold.blue);
 ```js
 require('colors');
 
-var Insert = require('../index').insert;
+var Insert = require('sql-builder').insert;
 
 var query = new Insert();
 
@@ -105,7 +105,7 @@ console.log(query.toString().bold.blue);
 ```js
 require('colors');
 
-var Update = require('../index').update;
+var Update = require('sql-builder').update;
 
 var query = new Update();
 
@@ -121,6 +121,11 @@ console.log(query.toString().bold.blue);
 ```
 
 ## Change Log
+
+#### v.0.0.4Beta
+
+- Syntax changes acording jshint.
+- Added colors dependency only to run examples.
 
 #### v.0.0.3Beta
 
