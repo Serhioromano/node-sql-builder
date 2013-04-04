@@ -1,6 +1,6 @@
 ## Node SQL Query Builder
 
-This is adapter based SQL query builder. This means that building queries for every DB like MySQL(included), 
+This is adapter based SQL query builder. This means that building queries for every DB like MySQL(included),
 SQLite is handled by separate adapters. It make this sql query builder highly extendable.
 
 ## How to use
@@ -14,7 +14,7 @@ var Select = require('sql-builder').select;
 
 // you can assign some query data on construction
 var query = new Select({
-	group:'time', 
+	group:'time',
 	having:['t = 1 ASC', 'b = 2 DESC']
 });
 
@@ -80,6 +80,8 @@ require('colors');
 var Insert = require('sql-builder').insert;
 
 var query = new Insert();
+
+query.ignore(true);
 
 query.into('user');
 
