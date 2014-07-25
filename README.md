@@ -140,6 +140,15 @@ console.log(query.toString().bold.blue);
 
 ## Change Log
 
+#### v.0.0.5Beta
+
+- Added feature to create INSERT with multiple value
+- Added feature to specify the names of columns in the INSERT
+- Added SET keyword into UPDATE query
+- Escape names of fields into UPDATE query
+- Correct substitution in INSERT and UPDATE values of types Boolean and Number
+- Fixed field names in case JOIN multiple table
+
 #### v.0.0.4Beta
 
 - Syntax changes acording jshint.
