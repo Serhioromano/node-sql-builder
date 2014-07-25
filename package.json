@@ -1,18 +1,18 @@
 {
   "name": "sql-builder",
   "preferGlobal": "false",
-  "version": "0.0.4beta",
+  "version": "0.0.5beta",
   "author": {
     "email": "serg4172@mail.ru",
     "name": "Sergey Romanov",
     "url": "http://www.facebook.com/serhioromano"
   },
   "description": "Adapter based SQL query string builder. Get total control over constructing you SQL queries. Quickly create adapter for your favorit DB (MySQL adapter included).  Set where condition, and delete it later if your app changed its mind :).",
-  "contributors": [ 
+  "contributors": [
     {
-      "name": "May be you?",
-      "email": "you@are.welcome"
-    } 
+      "name": "Pavel Sapachev",
+      "email": "pavel@sapachev.com"
+    }
   ],
   "main": "./index",
   "repository": {
